@@ -1,9 +1,16 @@
+'use strict';
+
 const {executeSql} = require("./src/utils/dataBase.js");
 
-exports.handler = async (event) => {
-    let response;
-    response = await executeDataBaseSQL("");
-    return response;
+module.exports.handler = async () => {
+    try{
+        let response;
+        response = await executeDataBaseSQL("");
+        return response;
+    }catch (error) {
+        console.log(`Error al ejecutar la lambda: ${error}`);
+        return responseMessage(500, error)
+    }
   };
 
 async function executeDataBaseSQL(sql) {
