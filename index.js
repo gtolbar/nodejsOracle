@@ -1,6 +1,7 @@
 'use strict';
 
 const {executeSql} = require("./src/utils/dataBase.js");
+const { responseMessage } = require("./src/config/response");
 
 module.exports.handler = async () => {
     try{
