@@ -4,9 +4,9 @@ async function getSecrets() {
     try {
 
         let keysOracle = {
-            USER_ORACLE: secretOracle.username,
-            PASSWORD_ORACLE: secretOracle.password,
-            CONNECTION_STRING_ORACLE: connectionOracle,
+            USER_ORACLE: "testuser",
+            PASSWORD_ORACLE: "testpass",
+            CONNECTION_STRING_ORACLE: "connectionOracle",
         }
 
         cacheSecrets.keysOracle = keysOracle;
